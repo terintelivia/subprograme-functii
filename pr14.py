@@ -51,10 +51,7 @@ print("cifre comune=", cifrecomune(nr1,nr2))
 def cifrediferite(x,y):
     return list(set(str(x)).difference(set(str(y))))
 print("cifrele care se contin in primul numar,iar in al doilea nu=",cifrediferite(nr1,nr2))
-def prietene():
-    divizor1=divizoricomuni(nr1)
-    divizor2=divizoricomuni(nr2)
-    if divizor1==divizor2:
-        print(f"PRIETENE")
-    else:
-        print(f"NU SUNT PRIETENE")
+def cifreprietene(x,y):
+    if len([i for i in range(1,x+1) if x%i==0])==len([i for i in range(1,y+1) if y%i==0]):
+        return 'PRIETENIE'
+print("Prietene", cifreprietene(nr1,nr2)
